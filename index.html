@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Haessly for State House • Chittenden-16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Official campaign palette — Chris Haessly Brand Identity Template */
+    --blue:#004D8C;        /* CH_Deep_Blue */
+    --blue-dark:#013865;   /* derived shade of CH_Deep_Blue for depth */
+    --hero-bg:#1D407A;     /* sampled from banner.png so the hero blends seamlessly into it */
+    --green:#367C3F;       /* CH_Forest_Green */
+    --green-dark:#2A6231;  /* derived shade of CH_Forest_Green */
+    --grey:#7F7F7F;        /* CH_Rock_Grey */
+    --pale:#D9E2E8;        /* CH_Pale_Sky_Grey */
+    --tag-bg:#BFDCB4;      /* light sage tint of CH_Forest_Green, for the tag strip */
+    --white:#FFFFFF;       /* CH_Snow_White */
+    --ink:#1C2226;
+    --line: rgba(0,77,140,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Avenir Next', 'Nunito Sans', sans-serif;
+    font-weight:400;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:800;
+    margin:0;
+    color:var(--blue);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  .eyebrow{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:700;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--green);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(1,56,101,0.96);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .nav-inner{
+    max-width:960px;
+    margin:0 auto;
+    padding:10px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav-name{
+    color:var(--white);
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .nav-links{
+    display:flex;
+    gap:26px;
+    align-items:center;
+  }
+  .nav-links a{
+    color:rgba(255,255,255,0.85);
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+  .nav-links a:hover{color:var(--white);}
+  .nav-cta{
+    background:var(--green);
+    color:var(--white) !important;
+    padding:9px 18px;
+    border-radius:3px;
+    font-weight:700 !important;
+  }
+  .nav-cta:hover{background:var(--green-dark);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--hero-bg);
+    color:var(--white);
+    padding:56px 0 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+    position:relative;
+  }
+
+  /* full lockup banner (logo + name + role + district baked into one image) */
+  .hero-banner-wrap{
+    margin-bottom:40px;
+  }
+  .hero-banner{
+    width:100%;
+    max-width:640px;
+    height:auto;
+  }
+
+  /* quote / copy / photo row */
+  .hero-content{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .hero-quote{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:27px;
+    line-height:1.35;
+    color:var(--white);
+    margin:0 0 18px;
+  }
+  .hero-quote em{font-style:italic; font-weight:900;}
+  .hero-sub{
+    font-size:18px;
+    color:rgba(255,255,255,0.88);
+    max-width:46ch;
+    margin-bottom:28px;
+    font-weight:500;
+  }
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:3px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:15px;
+    letter-spacing:.01em;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary{
+    background:var(--green);
+    color:var(--white);
+  }
+  .btn-primary:hover{background:var(--green-dark); transform:translateY(-1px);}
+  .btn-ghost{
+    background:transparent;
+    color:var(--white);
+    border:1.5px solid rgba(255,255,255,0.55);
+  }
+  .btn-ghost:hover{border-color:var(--white); transform:translateY(-1px);}
+
+  .hero-photo-col{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  .hero-photo{
+    width:100%;
+    max-width:300px;
+    border-radius:6px 6px 0 0;
+    box-shadow:0 22px 48px rgba(0,0,0,0.42);
+    border:4px solid rgba(255,255,255,0.1);
+    border-bottom:none;
+  }
+
+  /* ---------- TAG STRIP ---------- */
+  .tag-strip{
+    background:var(--tag-bg);
+  }
+  .tag-strip-inner{
+    padding:20px 28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+    align-items:center;
+  }
+  .tag-strip-inner span{
+    color:var(--blue-dark);
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- INTRO / STATEMENT ---------- */
+  .section{
+    padding:64px 0;
+  }
+  .section-narrow{max-width:720px; margin:0 auto; padding-left:28px; padding-right:28px;}
+
+  .greeting{
+    font-size:26px;
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:800;
+    color:var(--blue);
+    margin-bottom:22px;
+  }
+  .statement p{
+    margin:0 0 20px;
+    font-size:17.5px;
+    color:#2A2F35;
+  }
+  .statement p.highlight{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:23px;
+    line-height:1.4;
+    color:var(--blue);
+  }
+  .statement-more{display:none;}
+  .statement-more.expanded{display:block;}
+  .read-more-btn{
+    background:none;
+    border:none;
+    padding:0;
+    margin-top:-6px;
+    color:var(--green-dark);
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .read-more-btn:hover{color:var(--green);}
+
+  .pullquote{
+    background:var(--green);
+    color:var(--white);
+    padding:58px 0;
+    text-align:center;
+    position:relative;
+  }
+  .pullquote blockquote{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:800;
+    font-size:30px;
+    line-height:1.4;
+    max-width:680px;
+    margin:0 auto;
+  }
+  .pullquote .quote-mark{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:800;
+    font-size:64px;
+    color:rgba(255,255,255,0.35);
+    line-height:1;
+    display:block;
+    margin-bottom:6px;
+  }
+
+  /* ---------- RECORD ---------- */
+  .record{
+    background:var(--pale);
+    padding:70px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .record-head{
+    text-align:center;
+    margin-bottom:42px;
+  }
+  .record-head h2{
+    font-size:32px;
+    margin-top:8px;
+  }
+  .record-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+  .record-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-top:4px solid var(--blue);
+    padding:30px 28px;
+    border-radius:4px;
+  }
+  .record-card:nth-child(2){border-top-color:var(--green);}
+  .record-card h3{
+    font-size:20px;
+    margin-bottom:14px;
+  }
+  .record-card p{
+    margin:0;
+    font-size:15.5px;
+    color:#383D42;
+  }
+  .record-card p.record-lede{
+    font-weight:700;
+    color:var(--blue);
+    margin-bottom:16px;
+  }
+  .record-list{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .record-list li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:13px;
+    font-size:15.5px;
+    line-height:1.55;
+    color:#383D42;
+  }
+  .record-list li:last-child{margin-bottom:0;}
+  .record-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:8px;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green);
+  }
+  .record-list li strong{color:var(--ink);}
+
+  /* ---------- FUNDING ---------- */
+  .funding{
+    padding:66px 0;
+  }
+  .funding-box{
+    max-width:760px;
+    margin:0 auto;
+    background:var(--blue-dark);
+    color:var(--white);
+    border-radius:6px;
+    padding:44px 44px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .funding-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 85% 0%, rgba(54,124,63,0.28), transparent 55%);
+  }
+  .funding-cap{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-size:56px;
+    font-weight:900;
+    color:#8fd39c;
+    margin:6px 0 4px;
+    position:relative;
+  }
+  .funding-box h2{
+    color:var(--white);
+    font-size:23px;
+    margin-bottom:16px;
+    position:relative;
+  }
+  .funding-box p{
+    color:rgba(255,255,255,0.87);
+    font-size:16px;
+    max-width:52ch;
+    margin:0 auto;
+    position:relative;
+  }
+
+  /* ---------- CLOSING / CTA ---------- */
+  .closing{
+    background:var(--white);
+    padding:70px 0 80px;
+    text-align:center;
+  }
+  .closing h2{
+    font-size:30px;
+    margin-bottom:18px;
+  }
+  .closing p{
+    max-width:60ch;
+    margin:0 auto 30px;
+    font-size:17px;
+    color:#333844;
+  }
+  .closing .signoff{
+    margin-top:36px;
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    font-weight:700;
+    font-size:18px;
+    color:var(--green-dark);
+  }
+
+  /* ---------- PRIORITIES STRIP ---------- */
+  .priorities{
+    padding:56px 0 10px;
+    background:var(--white);
+  }
+  .priorities-head{
+    text-align:center;
+    margin-bottom:34px;
+  }
+  .priorities-head h2{font-size:29px; margin-top:8px;}
+  .priorities-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px 24px;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .priority-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:16px 18px;
+    background:var(--pale);
+    border:1px solid var(--line);
+    border-radius:4px;
+    font-weight:600;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .priority-item .mark{
+    color:var(--green);
+    font-size:18px;
+    line-height:1;
+    margin-top:1px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--blue-dark);
+    color:rgba(255,255,255,0.8);
+    padding:44px 0 34px;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:24px;
+  }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .footer-brand span{
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    color:var(--white);
+    font-weight:800;
+    font-size:18px;
+  }
+  .footer-cta a{
+    color:#8fd39c;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14.5px;
+  }
+  .disclaimer{
+    margin-top:30px;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,0.16);
+    font-size:12.5px;
+    color:rgba(255,255,255,0.58);
+    line-height:1.6;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 780px){
+    .hero-banner-wrap{margin-bottom:28px;}
+    .hero-banner{max-width:100%;}
+    .hero-content{grid-template-columns:1fr;}
+    .hero-photo-col{order:-1; max-width:220px; margin:0 auto 20px;}
+    .hero-quote{font-size:22px;}
+    .record-grid{grid-template-columns:1fr;}
+    .priorities-list{grid-template-columns:1fr;}
+    .nav-links{gap:14px;}
+    .nav-links a:not(.nav-cta){display:none;}
+    .funding-box{padding:34px 24px;}
+    .pullquote blockquote{font-size:22px;}
+    .tag-strip-inner{gap:16px; padding:16px 28px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-name">Chris for BTV</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#priorities">Priorities</a>
+      <a href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Get Involved</a>
+      <a class="nav-cta" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-banner-wrap">
+      <h1><img class="hero-banner" src="banner.png" alt="Chris Haessly for State Representative — Downtown &amp; Old North End"></h1>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-content-text">
+        <p class="hero-quote">&ldquo;A Vermont we can <em>ALL</em> afford to call home&rdquo;</p>
+        <p class="hero-sub">Twenty-five years a Burlington renter. Running for essential workers, working families, and every Vermonter trying to build a life here.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
+        </div>
+      </div>
+      <div class="hero-photo-col">
+        <img class="hero-photo" src="headshot.jpg" alt="Chris Haessly">
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="tag-strip">
+  <div class="wrap tag-strip-inner">
+    <span>Longtime Renter</span>
+    <span>Downtown Resident</span>
+    <span>Independent</span>
+  </div>
+</div>
+
+<main>
+
+  <section class="section section-narrow" id="about">
+    <p class="greeting">Hello, Neighbors!</p>
+    <div class="statement">
+      <p>My name is Christopher Haessly and I'm running for State House to represent Downtown and the Old North End. I'm an Independent because I believe good ideas shouldn't depend on a party line.</p>
+      <p class="highlight">I've lived in Burlington for more than twenty-five years, and I've been a renter the entire time.</p>
+      <p>I'm running because I believe that young people and working families deserve an opportunity to own their own home and earn a livable wage &mdash; and that neighbors struggling with mental health conditions and substance use disorder deserve access to treatment.</p>
+      <div class="statement-more" id="statement-more">
+        <p>When I talk to the people who live and work in our community, it's clear that many folks are being left behind. Our bartenders, servers, cooks, dishwashers, housekeepers, retail associates, artists, musicians, healthcare workers, social workers, and trades people &mdash; pretty much anybody who rents and works hard for an hourly wage and tips &mdash; are sometimes forced to work two or three jobs just to pay for rent, groceries, and healthcare. Many of our neighbors live with one or more roommates because they cannot afford to live on their own.</p>
+        <p>We've seen entire neighborhoods of single-family homes get converted into off-campus dormitories for a university that refuses to house its students. We've seen young families and working people get priced out of Burlington because they cannot find an affordable starter home &mdash; a contributing factor to declining enrollment in our public schools. We've seen seniors and folks on fixed incomes getting crushed by rising property taxes that make it difficult for them to stay in their homes.</p>
+        <p>When I walk around downtown, I see people who are struggling every day, and it's clear to me that the people who are most in need of services are the least likely to receive them. Vermont has only a handful of treatment centers, and most don't accept Medicaid &mdash; which means the people most likely to need help are the least likely to be able to afford it. These folks deserve more than shelter &mdash; they deserve treatment delivered with compassion and dignity.</p>
+        <p>It's clear that current policies are not working. We need to ensure that housing remains affordable, that homeownership remains within reach of young people and working families, and that the state commits to increasing the number of treatment beds so that access to care isn't determined by what insurance you carry.</p>
+      </div>
+      <button type="button" class="read-more-btn" id="read-more-btn" aria-expanded="false" aria-controls="statement-more">Read More&hellip;</button>
+    </div>
+  </section>
+
+  <div class="pullquote">
+    <div class="wrap">
+      <span class="quote-mark">&ldquo;</span>
+      <blockquote>Vermont should be a place<br>where the people who work here<br>can afford to stay here.</blockquote>
+    </div>
+  </div>
+
+  <section class="priorities" id="priorities">
+    <div class="wrap">
+      <div class="priorities-head">
+        <div class="eyebrow" style="text-align:center;">What I'll Fight For</div>
+        <h2>Priorities for Chittenden&#8209;16</h2>
+      </div>
+      <div class="priorities-list">
+        <div class="priority-item"><span class="mark">&#10003;</span> Affordable Rents for Essential Workers</div>
+        <div class="priority-item"><span class="mark">&#10003;</span> Homeownership for Working Families</div>
+        <div class="priority-item"><span class="mark">&#10003;</span> Livable Wage Jobs for Working Vermonters</div>
+        <div class="priority-item"><span class="mark">&#10003;</span> Job Opportunities for Recent Graduates</div>
+        <div class="priority-item"><span class="mark">&#10003;</span> Safe Schools for Our Kids</div>
+        <div class="priority-item"><span class="mark">&#10003;</span> Property Tax Relief for Seniors</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="record">
+    <div class="wrap">
+      <div class="record-head">
+        <div class="eyebrow" style="text-align:center;">Track Record</div>
+        <h2>Proven Leadership, Continued Service</h2>
+      </div>
+      <div class="record-grid">
+        <div class="record-card">
+          <h3>Proven Leadership</h3>
+          <p class="record-lede">Seven years as the Ward 2 School Commissioner on the Burlington School Board.</p>
+          <ul class="record-list">
+            <li>Worked with community members from the Old North End to preserve our neighborhood schools</li>
+            <li>Stood with our paraeducators, custodians, and food service workers to demand a livable wage</li>
+            <li>Successfully advocated for the inclusion of gender identity and expression into school district policies as a protected class &mdash; before those provisions were enshrined into State Law</li>
+          </ul>
+        </div>
+        <div class="record-card">
+          <h3>Continued Service</h3>
+          <ul class="record-list">
+            <li><strong>Church Street Marketplace Commission</strong> &mdash; advocated for common sense approaches to community safety to ensure the safety of city residents and downtown workers</li>
+            <li><strong>Ward 3 Neighborhood Planning Assembly (NPA)</strong> &mdash; worked with community members to address traffic safety concerns and ensure our roads remain safe for pedestrians, cyclists, and neighborhood residents</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="funding" id="funding">
+    <div class="wrap">
+      <div class="funding-box">
+        <div class="eyebrow">A Campaign Funded by Neighbors, Not Elites</div>
+        <div class="funding-cap">$99</div>
+        <h2>Our voluntary individual contribution limit</h2>
+        <p>I believe candidates for elected office should be evaluated on the basis of ideas and policy proposals &mdash; not how much money they can raise. That's why we are asking supporters to voluntarily limit individual campaign contributions to no more than $99.</p>
+        <div class="btn-row" style="justify-content:center; margin-top:26px; position:relative;">
+          <a class="btn btn-primary" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <div class="eyebrow" style="text-align:center;">A Campaign for All of Us</div>
+      <h2>Let's build an economy that works for working people.</h2>
+      <p>If you believe that rents should be affordable, that young people and working families deserve to own their own home and earn a livable wage, that people struggling with mental health and substance use disorders deserve treatment, and that seniors shouldn't be priced out of their homes by rising property taxes,<br>I invite you to join our campaign.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
+        <a class="btn btn-ghost" style="color:var(--blue); border-color:var(--blue);" href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Volunteer</a>
+      </div>
+      <p class="signoff">Let's make Vermont a place we can ALL afford to call home.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span>Chris Haessly for State Representative • Chittenden-16</span>
+    </div>
+    <div class="footer-cta">
+      <a href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:chrisforbtv@gmail.com">chrisforbtv@gmail.com</a>
+    </div>
+  </div>
+  <div class="wrap disclaimer">
+    Paid for by Friends of Christopher Haessly &mdash; PO Box 11, Burlington, VT 05402
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('read-more-btn');
+  var more = document.getElementById('statement-more');
+  if(!btn || !more) return;
+  btn.addEventListener('click', function(){
+    var expanded = more.classList.toggle('expanded');
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    btn.textContent = expanded ? 'Read Less' : 'Read More…';
+  });
+})();
+</script>
+
+</body>
+</html>
