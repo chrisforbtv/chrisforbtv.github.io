@@ -557,6 +557,7 @@
     font-weight:700;
     font-size:14.5px;
   }
+  .footer-cta a:hover{color:var(--white);}
   .disclaimer{
     margin-top:30px;
     padding-top:22px;
@@ -564,7 +565,13 @@
     font-size:12.5px;
     color:rgba(255,255,255,0.58);
     line-height:1.6;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px 24px;
   }
+  .disclaimer a{color:#8fd39c; text-decoration:none; font-weight:700;} /* same light green as the Volunteer and Donate links */
+  .disclaimer a:hover{color:var(--white);}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 780px){
@@ -575,6 +582,7 @@
     .hero-quote{font-size:22px;}
     .record-grid{grid-template-columns:1fr;}
     .priorities-list{grid-template-columns:1fr;}
+    .title-break{display:none;} /* single column on phones: let titles wrap naturally */
     .vote-grid{grid-template-columns:1fr 1fr;}
     .vote-head h2{font-size:25px;}
     .vote-head .vote-ask{font-size:22px;}
@@ -706,14 +714,14 @@
         <h2>Priorities for Chittenden&#8209;16</h2>
       </div>
       <div class="priorities-list">
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Affordable Rents for Essential Workers</h3><p>The bartenders, cooks, housekeepers and retail workers who keep downtown running shouldn't need two jobs to cover rent. I'll push to build more homes people can afford on a working wage, and to protect renters from being priced out.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Homeownership for Working Families</h3><p>After 25 years as a Burlington renter, I know how far ownership can feel. I'll support first-time buyer help and starter homes so families can put down roots here.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Livable Wage Jobs for Working Vermonters</h3><p>On the School Board I fought for livable wages for support staff. In Montpelier I'll keep working so a full-time job pays enough to live in the community you serve.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Job Opportunities for Recent Graduates</h3><p>Too many young Vermonters leave because the jobs and the rents don't add up. I'll back apprenticeships and local hiring that give graduates a reason to stay.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Mental Health &amp; Substance Use Treatment</h3><p>Downtown sees the cost of a system without enough care. I'll fight for treatment that is available when someone asks for help, with compassion for people and support for the neighbors and businesses around them.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>A Safe, Thriving Downtown</h3><p>On the Church Street Marketplace Commission, I've worked on keeping downtown safe and welcoming for everyone: residents, workers, small businesses and visitors. I'll push for state support for community safety and outreach and for streets that are safe to walk, so our neighborhoods stay places people want to live and work.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Safe Schools for Our Kids</h3><p>Seven years as Ward 2 School Commissioner taught me that safe schools depend on strong neighborhood schools and staff who are supported. I'll bring that experience to the State House.</p></div></div>
-        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Property Tax Relief for Seniors</h3><p>Seniors who built this city shouldn't be taxed out of the homes they've paid for. I'll support targeted relief for older Vermonters on fixed incomes.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Affordable Rents<br class="title-break"> for Essential Workers</h3><p>The bartenders, cooks, housekeepers and retail workers who keep downtown running shouldn't need two jobs to cover rent. I'll push to build more homes people can afford on a working wage, and to protect renters from being priced out.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Homeownership<br class="title-break"> for Working Families</h3><p>After 25 years as a Burlington renter, I know how far ownership can feel. I'll support first-time buyer help and starter homes so families can put down roots here.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Livable Wage Jobs<br class="title-break"> for Working Vermonters</h3><p>On the School Board I fought for livable wages for support staff. In Montpelier I'll keep working so a full-time job pays enough to cover rent and groceries and still live in the community you serve.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Job Opportunities<br class="title-break"> for Recent Graduates</h3><p>Too many young Vermonters leave because the jobs and the rents don't add up. I'll back apprenticeships and local hiring that give graduates a reason to stay.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Mental Health &amp; Substance Use<br class="title-break"> Treatment for Our Neighbors</h3><p>Downtown sees the cost of a system without enough care. I'll fight to increase the number of treatment beds and shelter beds, so that when someone is ready to ask for help, it's there for them, delivered with compassion and dignity.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>A Safe, Thriving Downtown<br class="title-break"> for Everyone</h3><p>On the Church Street Marketplace Commission, I've worked on keeping downtown safe and welcoming for everyone: residents, workers, small businesses and visitors. I'll push for state support for community safety and outreach and for streets that are safe to walk, so our neighborhoods stay places people want to live and work.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Safe Schools<br class="title-break"> for Our Kids</h3><p>Seven years as Ward 2 School Commissioner taught me that safe schools depend on strong neighborhood schools and staff who are supported. I'll bring that experience to the State House.</p></div></div>
+        <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Property Tax Relief<br class="title-break"> for Seniors</h3><p>Seniors who built this city shouldn't be taxed out of the homes they've paid for. I'll support targeted relief for older Vermonters on fixed incomes.</p></div></div>
       </div>
     </div>
   </section>
@@ -780,12 +788,13 @@
       <span>Chris Haessly for State Representative • Chittenden-16</span>
     </div>
     <div class="footer-cta">
-      <a href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a> &nbsp;&middot;&nbsp;
-      <a href="mailto:chrisforbtv@gmail.com">chrisforbtv@gmail.com</a>
+      <a href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Volunteer</a> &nbsp;&middot;&nbsp;
+      <a href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
     </div>
   </div>
   <div class="wrap disclaimer">
-    Paid for by Friends of Christopher Haessly • PO Box 11 • Burlington, VT 05402
+    <span>Paid for by Friends of Christopher Haessly • PO Box 11 • Burlington, VT 05402</span>
+    <a href="mailto:chrisforbtv@gmail.com">chrisforbtv@gmail.com</a>
   </div>
 </footer>
 
