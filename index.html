@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chris Haessly for State Representative • Chittenden-16</title>
+<title>Chris Haessly for State Representative • Downtown &amp; Old North End</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<meta name="description" content="Chris Haessly, Independent for State Representative, Downtown &amp; Old North End. A Vermont we can ALL afford to call home.">
+<meta name="description" content="Chris Haessly, Independent for State Representative, Downtown &amp; Old North End, Chittenden-16. A Vermont we can ALL afford to call home.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -536,7 +536,7 @@
   .footer-inner{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-start; /* links line up with the name line, not the middle of both lines */
     flex-wrap:wrap;
     gap:24px;
   }
@@ -551,11 +551,22 @@
     font-weight:800;
     font-size:18px;
   }
+  .footer-brand span{display:block; line-height:1.25;}
+  .footer-district{
+    display:block;
+    line-height:1.3;
+    margin-top:3px;
+    font-size:14px;
+    font-weight:600;
+    color:rgba(255,255,255,0.72);
+    letter-spacing:.01em;
+  }
+  .footer-cta{line-height:22.5px;} /* same line height as the name, so the text sits on the same baseline */
   .footer-cta a{
     color:#8fd39c;
     text-decoration:none;
     font-weight:700;
-    font-size:14.5px;
+    font-size:16px;
   }
   .footer-cta a:hover{color:var(--white);}
   .disclaimer{
@@ -711,7 +722,7 @@
     <div class="wrap">
       <div class="priorities-head">
         <div class="eyebrow" style="text-align:center;">What I'll Fight For</div>
-        <h2>Priorities for Chittenden&#8209;16</h2>
+        <h2>Priorities for Downtown&nbsp;&amp; the Old&nbsp;North&nbsp;End</h2>
       </div>
       <div class="priorities-list">
         <div class="priority-item"><span class="mark">&#10003;</span><div><h3>Affordable Rents<br class="title-break"> for Essential Workers</h3><p>The bartenders, cooks, housekeepers and retail workers who keep downtown running shouldn't need two jobs to cover rent. I'll push to build more homes people can afford on a working wage, and to protect renters from being priced out.</p></div></div>
@@ -770,13 +781,13 @@
   <section class="closing">
     <div class="wrap">
       <div class="eyebrow" style="text-align:center;">A Campaign for All of Us</div>
-      <h2>Let's build an economy that works for working people.</h2>
-      <p>If you believe that rents should be affordable, that young people and working families deserve to own their own home and earn a livable wage, that people struggling with mental health and substance use disorders deserve treatment, and that seniors shouldn't be priced out of their homes by rising property taxes,<br>I invite you to join our campaign.</p>
+      <h2>Let's build a Vermont that works for working people.</h2>
+      <p>Rents people can afford, and homes they can own. Jobs that pay enough to live here, and a reason for graduates to stay. Treatment for neighbors who need it, and a downtown that's safe for everyone. Safe schools for our kids, and seniors who can stay in the homes they built. If that's the Vermont you believe in, join our campaign.</p>
       <div class="btn-row" style="justify-content:center;">
         <a class="btn btn-primary" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
         <a class="btn btn-ghost" style="color:var(--blue); border-color:var(--blue);" href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Volunteer</a>
       </div>
-      <p class="signoff">Let's make Vermont a place we can ALL afford to call home.</p>
+      <p class="signoff">Together, let's make Vermont a place we can ALL afford to call home.</p>
     </div>
   </section>
 
@@ -785,7 +796,7 @@
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span>Chris Haessly for State Representative • Chittenden-16</span>
+      <div><span>Chris Haessly for State Representative</span><small class="footer-district">Downtown&nbsp;&amp; Old&nbsp;North&nbsp;End &middot; Chittenden&#8209;16</small></div>
     </div>
     <div class="footer-cta">
       <a href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Volunteer</a> &nbsp;&middot;&nbsp;
