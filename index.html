@@ -192,6 +192,13 @@
     border:1.5px solid rgba(255,255,255,0.55);
   }
   .btn-ghost:hover{border-color:var(--white); transform:translateY(-1px);}
+  /* hero buttons: matching outline style for equal emphasis */
+  .btn-hero{
+    background:transparent;
+    color:var(--white);
+    border:1.5px solid rgba(255,255,255,0.55);
+  }
+  .btn-hero:hover{border-color:var(--white); transform:translateY(-1px);}
 
   .hero-photo-col{
     display:flex;
@@ -360,6 +367,49 @@
     background:var(--green);
   }
   .record-list li strong{color:var(--ink);}
+
+  .tag-strip-inner a.tag-endorse{
+    color:var(--green-dark);
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-left:2px solid rgba(1,56,101,0.25);
+    padding-left:32px;
+  }
+  .tag-strip-inner a.tag-endorse:hover{text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---------- ENDORSEMENTS ---------- */
+  .endorse{
+    padding:66px 0 0;
+  }
+  .endorse-card{
+    max-width:760px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:36px;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-top:4px solid var(--green);
+    border-radius:4px;
+    padding:32px 36px;
+  }
+  .endorse-logo{
+    width:150px;
+    height:auto;
+    flex-shrink:0;
+  }
+  .endorse-text h2{
+    font-size:24px;
+    margin:6px 0 12px;
+  }
+  .endorse-text p{
+    margin:0;
+    font-size:16px;
+    color:#383D42;
+  }
 
   /* ---------- FUNDING ---------- */
   .funding{
@@ -609,6 +659,10 @@
     .funding-box{padding:34px 24px;}
     .pullquote blockquote{font-size:22px;}
     .tag-strip-inner{gap:16px; padding:16px 28px;}
+    .tag-strip-inner a.tag-endorse{border-left:none; padding-left:0;}
+    .endorse{padding-top:48px;}
+    .endorse-card{flex-direction:column; text-align:center; gap:20px; padding:28px 24px;}
+    .endorse-logo{width:120px;}
   }
 
   @media (max-width: 480px){
@@ -648,8 +702,8 @@
         <p class="hero-quote">A Vermont we can <em>ALL</em> afford to call home.</p>
         <p class="hero-sub">Twenty-five years a Burlington renter. Running because staying in Vermont shouldn't take two jobs.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="https://secure.anedot.com/chrisforbtv/donate" target="_blank" rel="noopener">Donate</a>
-          <a class="btn btn-ghost" href="#vote">How to Vote</a>
+          <a class="btn btn-hero" href="#vote">How to Vote</a>
+          <a class="btn btn-hero" href="https://forms.gle/aj4rXDXKiY1MU2Qy8" target="_blank" rel="noopener">Volunteer</a>
         </div>
       </div>
       <div class="hero-photo-col">
@@ -665,6 +719,7 @@
     <span>Longtime Renter</span>
     <span>Downtown Resident</span>
     <span>Independent</span>
+    <!-- VSEA ENDORSEMENT (hidden for now): <a class="tag-endorse" href="#endorsements">Endorsed by VSEA</a> -->
   </div>
 </div>
 
@@ -771,6 +826,21 @@
       </div>
     </div>
   </section>
+
+  <!-- VSEA ENDORSEMENT: hidden for now. To publish, delete this line and the matching END line below, and upload vsea-logo.png.
+  <section class="endorse" id="endorsements">
+    <div class="wrap">
+      <div class="endorse-card">
+        <img class="endorse-logo" src="vsea-logo.png" alt="Vermont State Employees' Association logo" width="320" height="249">
+        <div class="endorse-text">
+          <div class="eyebrow">Endorsed By</div>
+          <h2>Vermont State Employees&rsquo; Association</h2>
+          <p>VSEA and its more than 6,000 members have endorsed Christopher Haessly for State Representative. I'm proud to stand with the people who keep Vermont's public services running, and to keep fighting for wages that let working Vermonters afford to live in the communities they serve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  END VSEA ENDORSEMENT -->
 
   <section class="funding" id="funding">
     <div class="wrap">
