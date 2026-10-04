@@ -380,10 +380,61 @@
   }
   .tag-strip-inner a.tag-endorse:hover{text-decoration:underline; text-underline-offset:3px;}
 
+  /* ---------- EVENTS ---------- */
+  .events{
+    padding:66px 0 0;
+  }
+  .events-head{
+    text-align:center;
+    margin-bottom:28px;
+  }
+  .events-head h2{font-size:29px; margin-top:8px;}
+  .events-list{
+    max-width:760px;
+    margin:0 auto;
+    display:grid;
+    gap:16px;
+  }
+  .event-card{
+    display:flex;
+    gap:22px;
+    align-items:flex-start;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-top:4px solid var(--green);
+    border-radius:4px;
+    padding:24px 26px;
+  }
+  .event-date{
+    flex-shrink:0;
+    width:72px;
+    text-align:center;
+    background:var(--blue-dark);
+    color:var(--white);
+    border-radius:4px;
+    padding:8px 0 10px;
+    font-family:'Avenir Next', 'Poppins', sans-serif;
+    line-height:1.1;
+  }
+  .event-date .month{display:block; font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#8fd39c;}
+  .event-date .day{display:block; font-size:30px; font-weight:800;}
+  .event-date .day-range{font-size:19px; padding-top:6px;}
+  .event-info h3{font-size:19px; margin-bottom:6px;}
+  .event-info p{margin:0; font-size:15.5px; color:#383D42;}
+  .event-info p + p{margin-top:6px;}
+  .event-info .event-when{font-weight:700; color:var(--ink);}
+  .event-info a.event-link{white-space:nowrap; color:var(--blue); font-weight:700; text-decoration:underline; text-underline-offset:2px;}
+  .event-info a.event-link:hover{color:var(--blue-dark);}
+
   /* ---------- ENDORSEMENTS ---------- */
   .endorse{
     padding:66px 0 0;
   }
+  .endorse-head{
+    text-align:center;
+    margin-bottom:28px;
+  }
+  .endorse-head h2{font-size:29px; margin-top:8px;}
   .endorse-card{
     max-width:760px;
     margin:0 auto;
@@ -673,6 +724,8 @@
     .tag-strip-inner{gap:16px; padding:16px 28px;}
     .tag-strip-inner a.tag-endorse{border-left:none; padding-left:0;}
     .endorse{padding-top:48px;}
+    .events{padding-top:48px;}
+    .event-card{gap:16px; padding:20px 18px;}
     .endorse-card{flex-direction:column; text-align:center; gap:20px; padding:28px 24px;}
     .endorse-logo{width:120px;}
     .footer-social{justify-content:flex-start;}
@@ -843,8 +896,87 @@
     </div>
   </section>
 
+  <section class="events" id="events">
+    <div class="wrap">
+      <div class="events-head">
+        <div class="eyebrow" style="text-align:center;">Upcoming Events</div>
+        <h2>Meet Chris</h2>
+      </div>
+      <div class="events-list">
+        <div class="event-card">
+          <div class="event-date"><span class="month">Oct</span><span class="day">8</span></div>
+          <div class="event-info">
+            <h3>Ward 2 NPA Candidate Forum</h3>
+            <p class="event-when">Thursday, October&nbsp;8, 6:45&nbsp;p.m. to 7:50&nbsp;p.m.</p>
+            <p>A forum for the House candidates for Downtown and the Old North End, hosted by the Ward 2 Neighborhood Planning Assembly at its October meeting. Open to the public, with a virtual option.</p>
+            <p><strong>Old North End Community Center</strong>, 20 Allen St., Burlington &middot; <a class="event-link" href="https://zoom.us/j/93179389982" target="_blank" rel="noopener">Join on Zoom</a></p>
+          </div>
+        </div>
+        <!-- UVM TABLING, OCT 20: hidden until ready. To show it, delete this line and the matching END line below.
+        <div class="event-card">
+          <div class="event-date"><span class="month">Oct</span><span class="day">20</span></div>
+          <div class="event-info">
+            <h3>Tabling at UVM</h3>
+            <p class="event-when">Tuesday, October&nbsp;20, 10:00&nbsp;a.m. to 12:00&nbsp;p.m.</p>
+            <p>Stop by to meet Chris, ask questions about housing and the issues that matter to you, and get help with how and where to vote.</p>
+            <p><strong>Davis Student Center</strong>, University of Vermont</p>
+          </div>
+        </div>
+        END UVM TABLING, OCT 20 -->
+        <!-- UVM TABLING, OCT 22: hidden until ready. To show it, delete this line and the matching END line below.
+        <div class="event-card">
+          <div class="event-date"><span class="month">Oct</span><span class="day">22</span></div>
+          <div class="event-info">
+            <h3>Tabling at UVM</h3>
+            <p class="event-when">Thursday, October&nbsp;22, 12:00&nbsp;p.m. to 2:00&nbsp;p.m.</p>
+            <p>Stop by to meet Chris, ask questions about housing and the issues that matter to you, and get help with how and where to vote.</p>
+            <p><strong>Davis Student Center</strong>, University of Vermont</p>
+          </div>
+        </div>
+        END UVM TABLING, OCT 22 -->
+        <!-- UVM TABLING, OCT 27: hidden until ready. To show it, delete this line and the matching END line below.
+        <div class="event-card">
+          <div class="event-date"><span class="month">Oct</span><span class="day">27</span></div>
+          <div class="event-info">
+            <h3>Tabling at UVM</h3>
+            <p class="event-when">Tuesday, October&nbsp;27, 10:00&nbsp;a.m. to 12:00&nbsp;p.m.</p>
+            <p>Stop by to meet Chris, ask questions about housing and the issues that matter to you, and get help with how and where to vote.</p>
+            <p><strong>Davis Student Center</strong>, University of Vermont</p>
+          </div>
+        </div>
+        END UVM TABLING, OCT 27 -->
+        <!-- UVM TABLING, OCT 29: hidden until ready. To show it, delete this line and the matching END line below.
+        <div class="event-card">
+          <div class="event-date"><span class="month">Oct</span><span class="day">29</span></div>
+          <div class="event-info">
+            <h3>Tabling at UVM</h3>
+            <p class="event-when">Thursday, October&nbsp;29, 12:00&nbsp;p.m. to 2:00&nbsp;p.m.</p>
+            <p>Stop by to meet Chris, ask questions about housing and the issues that matter to you, and get help with how and where to vote.</p>
+            <p><strong>Davis Student Center</strong>, University of Vermont</p>
+          </div>
+        </div>
+        END UVM TABLING, OCT 29 -->
+        <!-- UVM TABLING, NOV 2: hidden until ready. To show it, delete this line and the matching END line below.
+        <div class="event-card">
+          <div class="event-date"><span class="month">Nov</span><span class="day">2</span></div>
+          <div class="event-info">
+            <h3>Tabling at UVM</h3>
+            <p class="event-when">Monday, November&nbsp;2, 11:00&nbsp;a.m. to 1:00&nbsp;p.m.</p>
+            <p>Stop by to meet Chris, ask questions about housing and the issues that matter to you, and get help with how and where to vote.</p>
+            <p><strong>Davis Student Center</strong>, University of Vermont</p>
+          </div>
+        </div>
+        END UVM TABLING, NOV 2 -->
+      </div>
+    </div>
+  </section>
+
   <section class="endorse" id="endorsements">
     <div class="wrap">
+      <div class="endorse-head">
+        <div class="eyebrow" style="text-align:center;">Endorsements</div>
+        <h2>Who&rsquo;s Supporting Chris</h2>
+      </div>
       <div class="endorse-card">
         <img class="endorse-logo" src="vsea-logo.png" alt="Vermont State Employees' Association logo" width="320" height="249">
         <div class="endorse-text">
